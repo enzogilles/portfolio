@@ -3,122 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio - Enzo Gilles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-
-    <!-- Barre de Navigation -->
-    <header class="bg-white shadow">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="text-2xl font-bold text-gray-800">Mon Portfolio</div>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#a-propos" class="text-gray-600 hover:text-gray-800">À Propos</a></li>
-                    <li><a href="#projets" class="text-gray-600 hover:text-gray-800">Projets</a></li>
-                    <li><a href="#competences" class="text-gray-600 hover:text-gray-800">Compétences</a></li>
-                    <li><a href="#contact" class="text-gray-600 hover:text-gray-800">Contact</a></li>
-                </ul>
-            </nav>
+<body>
+    <header id="home">
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <h1>Enzo Gilles</h1>
+            <p>Développeur et étudiant en informatique</p>
+            <a href="#projects" class="btn">Voir mes projets</a>
         </div>
     </header>
 
-    <!-- Section d'Introduction -->
-    <section class="bg-indigo-600 text-white py-20 text-center" id="intro">
-        <div class="container mx-auto">
-            <h1 class="text-4xl font-bold mb-4">Bonjour, je m'appelle Gilles Enzo</h1>
-            <p class="text-xl mb-8">Etudiant en CPI A2 à CESI Rouen, Je spécialisé dans la création de sites modernes et intuitifs.</p>
-            <a href="#projets" class="bg-white text-indigo-600 px-6 py-3 rounded-full shadow hover:bg-gray-100 transition duration-300">Voir mes Projets</a>
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis étudiant en informatique au CESI de Rouen, passionné par la programmation et la technologie. Actuellement, je travaille sur des projets tels qu'une station météo embarquée et des outils de chiffrement.</p>
+        <div class="skills">
+            <h3>Compétences :</h3>
+            <ul>
+                <li>C, C++, Python</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Arduino et microcontrôleurs</li>
+                <li>Gestion de projet et optimisation de code</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Section À Propos -->
-    <section class="container mx-auto py-20 px-6" id="a-propos">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold">À Propos de Moi</h2>
-            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Je suis un développeur web avec une solide expérience dans la création de sites web responsifs et dynamiques. J'adore apprendre et m'adapter aux nouvelles technologies pour concevoir des solutions innovantes.</p>
+    <section id="projects">
+        <h2>Mes projets</h2>
+        <div class="project">
+            <img src="project1.jpg" alt="Projet station météo">
+            <h3>Station météo embarquée</h3>
+            <p>Un système avancé mesurant les données environnementales en temps réel sur des navires.</p>
+            <a href="#" class="btn">Détails</a>
+        </div>
+        <div class="project">
+            <img src="project2.jpg" alt="Chiffrement">
+            <h3>Programme de chiffrement</h3>
+            <p>Une application en C++ pour crypter/décrypter des fichiers avec des algorithmes avancés.</p>
+            <a href="#" class="btn">Voir le code</a>
         </div>
     </section>
 
-    <!-- Section Projets -->
-    <section class="bg-gray-100 py-20" id="projets">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold">Projets Récents</h2>
-                <p class="text-gray-600">Voici quelques projets sur lesquels j'ai travaillé récemment.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Carte Projet 1 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/600x400" alt="Projet 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Projet 1</h3>
-                        <p class="text-gray-600 mb-4">Description du projet 1, ses fonctionnalités, et les technologies utilisées.</p>
-                        <a href="#" class="text-indigo-600 hover:underline">Voir le Projet</a>
-                    </div>
-                </div>
-                <!-- Carte Projet 2 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/600x400" alt="Projet 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Projet 2</h3>
-                        <p class="text-gray-600 mb-4">Description du projet 2, ses fonctionnalités, et les technologies utilisées.</p>
-                        <a href="#" class="text-indigo-600 hover:underline">Voir le Projet</a>
-                    </div>
-                </div>
-                <!-- Carte Projet 3 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/600x400" alt="Projet 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Projet 3</h3>
-                        <p class="text-gray-600 mb-4">Description du projet 3, ses fonctionnalités, et les technologies utilisées.</p>
-                        <a href="#" class="text-indigo-600 hover:underline">Voir le Projet</a>
-                    </div>
-                </div>
-            </div>
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form>
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <div class="socials">
+            <a href="https://github.com/EnzoGilles" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/EnzoGilles" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </section>
 
-    <!-- Section Compétences -->
-    <section class="container mx-auto py-20 px-6" id="competences">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold">Mes Compétences</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-            <div class="bg-white shadow-md rounded-lg p-6">
-                <h3 class="font-bold text-xl mb-2">HTML & CSS</h3>
-                <p class="text-gray-600">Création de pages web sémantiques et responsives.</p>
-            </div>
-            <div class="bg-white shadow-md rounded-lg p-6">
-                <h3 class="font-bold text-xl mb-2">JavaScript</h3>
-                <p class="text-gray-600">Développement de fonctionnalités interactives avec JavaScript.</p>
-            </div>
-            <div class="bg-white shadow-md rounded-lg p-6">
-                <h3 class="font-bold text-xl mb-2">React & Vue.js</h3>
-                <p class="text-gray-600">Création d'applications dynamiques avec React et Vue.js.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section class="bg-indigo-600 text-white py-20" id="contact">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold">Contactez-moi</h2>
-                <p class="text-xl mt-4">Vous souhaitez collaborer ou discuter d'un projet ? N'hésitez pas à me contacter !</p>
-            </div>
-            <div class="text-center">
-                <a href="mailto:votre.email@example.com" class="bg-white text-indigo-600 px-6 py-3 rounded-full shadow hover:bg-gray-100 transition duration-300">Envoyez-moi un Email</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pied de page -->
-    <footer class="bg-white shadow py-4">
-        <div class="container mx-auto text-center text-gray-600">
-            &copy; 2024 [Votre Nom]. Tous droits réservés.
-        </div>
+    <footer>
+        <p>&copy; 2024 Enzo Gilles. Tous droits réservés.</p>
     </footer>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
