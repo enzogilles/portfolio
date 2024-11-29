@@ -151,7 +151,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 50px 0; /* Ajustez cette valeur selon vos besoins */
+  margin: 20px 0; /* Réduire la marge entre les sections */
   padding: 20px; /* Ajustez cette valeur selon vos besoins */
   margin: 0 10rem;
   box-sizing: border-box;
@@ -320,6 +320,7 @@ section {
 
 #experience {
   position: relative;
+  margin-bottom: 20px; /* Ajustez cette valeur selon vos besoins */
 }
 
 .experience-sub-title {
@@ -333,6 +334,11 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.experience-details-container, .project-details-container {
+  margin-bottom: 0; /* Ajustez cette valeur selon vos besoins */
+  padding-bottom: 0; /* Assurez-vous qu'il n'y a pas de padding supplémentaire */
 }
 
 .article-container {
@@ -359,6 +365,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-bottom: 10px; /* Ajustez cette valeur selon vos besoins */
 }
 
 .color-container {
