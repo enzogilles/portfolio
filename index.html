@@ -1,76 +1,401 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Enzo Gilles</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header id="home">
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="intro">
-            <h1>Enzo Gilles</h1>
-            <p>Développeur et étudiant en informatique</p>
-            <a href="#projects" class="btn">Voir mes projets</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Enzo Gilles</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Enzo Gilles</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </header>
-
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Expérience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Enzo Gilles photo de profil" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Bonjour, je suis </p>
+        <h1 class="title">Enzo Gilles</h1>
+        <p class="section__text__p2">Étudiant en CPI A2 Informatique Cesi Rouen </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Télécharger mon CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="Mon profil Linkedin"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/enzo-gilles-3b0229280/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="Mon profil Github"
+            class="icon"
+            onclick="location.href='https://github.com/enzogilles'"
+          />
+        </div>
+      </div>
+    </section>
     <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Je suis étudiant en informatique au CESI de Rouen, passionné par la programmation et la technologie. Actuellement, je travaille sur des projets tels qu'une station météo embarquée et des outils de chiffrement.</p>
-        <div class="skills">
-            <h3>Compétences :</h3>
-            <ul>
-                <li>C, C++, Python</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Arduino et microcontrôleurs</li>
-                <li>Gestion de projet et optimisation de code</li>
-            </ul>
+      <p class="section__text__p1">Apprenez à me connaître</p>
+      <h1 class="title">À propos de moi</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Photo de profil"
+            class="about-pic"
+          />
         </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+          src="./assets/experience.png"
+          alt="Icône d'expérience"
+          class="icon"
+              />
+              <h3>Expérience</h3>
+              <ul>
+                <p>ASCT (Contrôleur)<br /></p>
+            <a href="https://emploi.sncf.com/nos-metiers/relation-clients/chef-de-bord" target="_blank">
+            <img
+              src="./assets/sncf.png"
+              alt="Logo SNCF"
+              class="icon"
+              style="width: 140px; height: auto; margin-top: 20px; margin-left: 10px;"
+            />
+            </a>
+          
+              </ul>
+              <br />
+            </div>
+            <div class="details-container">
+              <img
+          src="./assets/education.png"
+          alt="Icône d'éducation"
+          class="icon"
+              />
+                <h3>Éducation</h3>
+                <p>CPI A2 Informatique<br /></p>
+                <img
+                src="./assets/cesi.png"
+                alt="Logo CESI"
+                class="icon"
+                style="width: 150px; height: auto;"
+                onclick="location.href='https://www.cesi.fr/programmes/cursus-ingenieur-5-ans/?_gl=1*h84fx6*_gcl_au*MTYzNTU0NjgzNy4xNzMyNzE5NzY4#cycleprepa'"
+                />
+              </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Icône de flèche"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
-
+    <section id="experience">
+      <p class="section__text__p1">Découvrez mon</p>
+      <h1 class="title">Expérience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Développement Frontend</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Expérimenté</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Expérimenté</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basique</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basique</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Développement Backend</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basique</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Icône d'expérience"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermédiaire</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Icône de flèche"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
     <section id="projects">
-        <h2>Mes projets</h2>
-        <div class="project">
-            <img src="project1.jpg" alt="Projet station météo">
-            <h3>Station météo embarquée</h3>
-            <p>Un système avancé mesurant les données environnementales en temps réel sur des navires.</p>
-            <a href="#" class="btn">Détails</a>
+      <p class="section__text__p1">Parcourez mes récents</p>
+      <h1 class="title">Projets</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Projet 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet Un</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Démo en direct
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Projet 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet Deux</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Démo en direct
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Projet 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet Trois</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Démo en direct
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="project">
-            <img src="project2.jpg" alt="Chiffrement">
-            <h3>Programme de chiffrement</h3>
-            <p>Une application en C++ pour crypter/décrypter des fichiers avec des algorithmes avancés.</p>
-            <a href="#" class="btn">Voir le code</a>
-        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Icône de flèche"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </section>
-
     <section id="contact">
-        <h2>Contactez-moi</h2>
-        <form>
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-        <div class="socials">
-            <a href="https://github.com/EnzoGilles" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/EnzoGilles" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <p class="section__text__p1">Entrer en contact</p>
+      <h1 class="title">Contactez-moi</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Icône d'email"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">enzo.gilles3@gmail.com</a></p>
         </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="Icône LinkedIn"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/enzo-gilles-3b0229280/">LinkedIn</a></p>
+        </div>
+      </div>
     </section>
-
     <footer>
-        <p>&copy; 2024 Enzo Gilles. Tous droits réservés.</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Droit d'auteur &#169; 2024 Enzo Gilles. Tous droits réservés.</p>
     </footer>
-    <script src="scripts.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
